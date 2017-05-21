@@ -1,7 +1,11 @@
 #include <iostream>
+#include <string>
+
+#include "level.h"
+
 using namespace std;
 
 int main() {
-    cout << "Welcome to Bernard, the dankest game ever. \n" << endl;
-    return 0;
+  level levelF;
+  return 0;
 }
