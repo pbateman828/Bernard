@@ -3,7 +3,7 @@
 CMakeFiles
 Makefile
 CMakeCache.txt
-cmake_install.txt
+cmake_install.cmake
 
 # Compiled Object files
 *.slo
