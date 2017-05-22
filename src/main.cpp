@@ -2,10 +2,14 @@
 #include <string>
 
 #include "level.h"
+#include "toon.h"
 
 using namespace std;
 
 int main() {
-  level levelF;
-  return 0;
+    Toon t1 ("Kevin");
+    Toon t2;
+    t1.say_name();
+    t2.say_name();
+    return 0;
 }

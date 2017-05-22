@@ -1,16 +1,16 @@
 CXX=g++
 CXXFLAGS=-g -std=c++11 -Wall -pedantic
-BIN=run.o
+BIN=run
 
 SRC=$(wildcard *.cpp)
 OBJ=$(SRC:%.cpp=%.o)
 
-all: $(OBJ)
-	$(CXX) -o $(BIN) $^
+all: src/$(OBJ)
+	$(CXX) -o bin/$(BIN) bin/$^
 
-%.o: %.c
-	$(CXX) $@ -c $<
+build/%.o: src/%.c
+	$(CXX) src/$@ -c build/$<
 
 clean:
-	rm -f *.o
-	rm $(BIN)
+	rm -f build/*.o
+	rm bin/$(BIN)
