@@ -42,3 +42,11 @@ vector<string> Player::get_inv () {
 void Player::add_item (string item) {
     inventory.push_back(item);
 }
+
+void Player::del_item (string item) {
+    for (auto& i : inventory) {
+        if (i == item) {
+            inventory.erase(i);
+        }
+    }
+}

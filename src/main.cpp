@@ -13,5 +13,7 @@ int main() {
     kev.say_name();
     kev.add_item("ho");
     kev.print_inv();
+    kev.del_item("nuts");
+    kev.print_inv();
     return 0;
 }

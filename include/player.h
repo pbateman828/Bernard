@@ -19,6 +19,7 @@ class Player {
         string get_name();
         vector<string> get_inv();
         void add_item(string);
+        void del_item(string);
 };
 
 #endif
