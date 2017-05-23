@@ -8,25 +8,10 @@
 using namespace std;
 
 int main() {
-
-    level level1;
-
-    level1.printWorldName();
-
-    level1.printIntro();
-
-    level1.level1Descript();
-
-    Toon t2;
-
-    t2.say_name();
-
-    level1.userQuestion();
-
-
-    cout << level1.userInput() << endl;
-    //level insertLevel1("Don't just stand there, do something! Help. Police, Murder.");
-    //insertLevel1.printIntro();
-
+    Player kev ("Kevin");
+    kev.print_inv();
+    kev.say_name();
+    kev.add_item("ho");
+    kev.print_inv();
     return 0;
 }
