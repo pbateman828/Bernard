@@ -9,7 +9,7 @@ using namespace std;
 
 class Player {
         string name;
-        vector<string> inventory;
+        vector<string> inv;
     public:
         Player();
         Player(string);
@@ -19,6 +19,7 @@ class Player {
         string get_name();
         vector<string> get_inv();
         void add_item(string);
+        void del_item(string);
 };
 
 #endif
