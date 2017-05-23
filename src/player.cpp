@@ -44,7 +44,7 @@ void Player::add_item (string item) {
 }
 
 void Player::del_item (string item) {
-    for (int i = 0; i < inv.size(); i++) {
+    for (size_t i = 0; i < inv.size(); i++) {
         if(inv[i] == item) {
             inv.erase(inv.begin() + i);
             break;
