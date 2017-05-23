@@ -34,9 +34,9 @@ void level::userQuestion() {
 string level::userInput() {
      cout << _userInputArrow;
      cin >> _userIn;
-     bool b = false;
+     bool b = boost::algorithm::contains(_userIn, _helpUser);
      string noHelp = "There is no help. Fuck ya self!";
-     if (b != boost::algorithm::contains(_userIn, _helpUser)) {
+     if (b != true) {
          return _userIn;
      }
      else {
