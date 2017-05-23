@@ -28,9 +28,20 @@ act hash_it (std::string const& ss) {
 void parse (vector<string> vs) { 
     //This is where we will look for keywords
     ////Need to decide on the command structure
-    switch (hash_it(vs[0])) {
+    act iv = hash_it(vs[0]);
+    switch (iv) {
         case inv:
             cout << "Print inventory" << endl;
+        case go:
+            cout << "Go somewhere" << endl;
+        case look:
+            cout << "Look around" << endl;
+        case take:
+            cout << "Take something" << endl;
+        case drop:
+            cout << "Drop item" << endl;
+        case use:
+            cout << "Use item on something" << endl;
         default:
             cout << "I don't understand" << endl;
     }
