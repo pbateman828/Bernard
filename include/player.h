@@ -9,7 +9,7 @@ using namespace std;
 
 class Player {
         string name;
-        vector<string> inventory;
+        vector<string> inv;
     public:
         Player();
         Player(string);

@@ -22,7 +22,7 @@ void Player::say_name () {
 }
 
 void Player::print_inv () {
-    for (auto& i : inventory) {
+    for (auto& i : inv) {
         cout << i << endl;
     }
 }
@@ -36,17 +36,21 @@ string Player::get_name () {
 }
 
 vector<string> Player::get_inv () {
-    return inventory;
+    return inv;
 }
 
 void Player::add_item (string item) {
-    inventory.push_back(item);
+    inv.push_back(item);
 }
 
 void Player::del_item (string item) {
-    for (auto& i : inventory) {
-        if (i == item) {
-            inventory.erase(i);
+    for (int i = 0; i < inv.size(); i++) {
+        if(inv[i] == item) {
+            inv.erase(inv.begin() + i);
+            break;
+        }
+        if(i == inv.size() - 1) {
+            cout << "Item not in inventory.";
         }
     }
 }
