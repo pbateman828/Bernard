@@ -7,7 +7,8 @@
 
 using namespace std;
 
-void parse (vector<string> vs) {
+void parse (vector<string> vs) { //This is where we will look for keywords
+                                 //Need to decide on the command structure
     for (auto& i : vs) {
         cout << i << endl;
     }
@@ -30,9 +31,11 @@ bool u_input () {
     cout << "Tell me what to do. type \'quit\' or \'q\'to quit " << endl;
     getline(cin, com);
     tk = tokenize(com);
-    if(tk[0] == "quit" || tk[0] == "q") {
+    if(tk[0] == "quit" || tk[0] == "q") { //this is how you quit the game
         return true;
     }
+
+    //Need to figure a way to save the game state.
     parse(tk);
     cout << "Thanks for the input! " << endl;
     cout << "\n";
