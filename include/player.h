@@ -4,17 +4,18 @@
 #include <string>
 #include <vector>
 
-#include "toon.h"
-
 using namespace std;
 
-class Player: public Toon {
+class Player {
+        string name;
         vector<string> inventory;
     public:
         Player();
         Player(string);
         void print_inv();
-
+        void set_name(string);
+        string get_name();
+        vector<string> get_inv();
 }
 
 #endif
