@@ -7,16 +7,18 @@
 using namespace std;
 
 int main() {
-    Toon t1 ("Kevin");
-    Toon t2;
-    t1.say_name();
-    t2.say_name();
-    
+
     level level1;
 
     level1.printWorldName();
 
     level1.printIntro();
+
+    level1.level1Descript();
+
+    Toon t2;
+
+    t2.say_name();
 
     level1.userQuestion();
 

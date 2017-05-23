@@ -2,6 +2,7 @@
 #include <iostream>
 #include <string>
 
+
 using namespace std;
 
 //if the level doesnt have an intro, default constructor
@@ -33,6 +34,19 @@ void level::userQuestion() {
 string level::userInput() {
      cout << _userInputArrow;
      cin >> _userIn;
-     return _userIn;
+     bool b = false;
+     string noHelp = "There is no help. Fuck ya self!";
+     if (b != boost::algorithm::contains(_userIn, _helpUser)) {
+         return _userIn;
+     }
+     else {
+         return noHelp;
+     }
+}
 
+void level::level1Descript() {
+    cout << _levelDescriptWords << endl;
+    cout << _spaces <<  endl;
+    cout << _level1Env << endl;
+    cout << _spaces <<  endl;
 }
