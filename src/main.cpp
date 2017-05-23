@@ -3,6 +3,7 @@
 
 #include "level.h"
 #include "toon.h"
+#include "player.h"
 
 using namespace std;
 
