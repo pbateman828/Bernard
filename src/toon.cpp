@@ -6,7 +6,7 @@
 using namespace std;
 
 Toon::Toon () {
-    name = "...I have no name...";
+
 }
 
 Toon::Toon (string s) {
@@ -14,5 +14,10 @@ Toon::Toon (string s) {
 }
 
 void Toon::say_name () {
-    cout << "My name is " << name << endl;
+    cout << "What is your name?" << endl;
+    cout << ">";
+    cin >> name;
+    cout << "  " << endl;
+    cout << "# Your name is " << name << endl;
+    cout << "                                       ";
 }
