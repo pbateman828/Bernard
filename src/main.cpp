@@ -8,11 +8,25 @@
 
 using namespace std;
 
+Player* p_init() {
+    string n;
+    Player* p;
+    cout << "What is your name?" << endl;
+    getline(cin,n);
+    p = new Player{n};
+
+    return p;
+}
+
+
+
 int main() {
     bool quit = false;
 
+    Player* p = p_init();
+
     while(!quit) {
-        quit = u_input();
+        quit = u_input(p);
     }
     /* 
     Player kev ("Kevin");

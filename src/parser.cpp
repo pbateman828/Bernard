@@ -1,4 +1,5 @@
 #include "parser.h"
+#include "player.h"
 #include <iostream>
 #include <string>
 #include <algorithm>
@@ -25,13 +26,14 @@ act hash_it (std::string const& ss) {
     if(ss == "use") {return use;}
 }
 
-void parse (vector<string> vs) {
+void parse (vector<string> vs, Player* p) {
     //This is where we will look for keywords
     ////Need to decide on the command structure
     act iv = hash_it(vs[0]);
     switch (iv) {
         case inv:
             cout << "Print inventory" << endl;
+            p->print_inv();
             break;
         case go:
             cout << "Go somewhere" << endl;
@@ -44,6 +46,7 @@ void parse (vector<string> vs) {
             break;
         case drop:
             cout << "Drop item" << endl;
+            p->del_item(vs[1]);
             break;
         case use:
             cout << "Use item on something" << endl;
@@ -64,7 +67,7 @@ vector<string> tokenize (string s) {
     return tokens;
 }
 
-bool u_input () {
+bool u_input (Player* p) {
 
     vector<string> tk;
     string com;
@@ -78,7 +81,7 @@ bool u_input () {
     //This is pretty ugly, will revisit after sleep
 
     //Need to figure a way to save the game state.
-    parse(tk);
+    parse(tk, p);
     cout << "Thanks for the input! " << endl;
     cout << "\n";
     return false;
