@@ -1,18 +1,20 @@
-#include <string>
-#include <iostream>
-
 #include "player.h"
+#include <string>
+#include <vector>
+#include <iostream>
 
 using namespace std;
 
 Player::Player () {
-    inventory = { "deez" , "nuts" };
-    name = "...I have no name...";
+    add_item("deez");
+    add_item("nuts");
+    set_name("...I have no name...");
 }
 
 Player::Player (string s) {
-    name = s;
-    inventory = { "deez" , "nuts" };
+    set_name(s);
+    add_item("deez");
+    add_item("nuts");
 }
 
 void Player::say_name () {
@@ -20,7 +22,7 @@ void Player::say_name () {
 }
 
 void Player::print_inv () {
-    for (auto& i : inventory) {
+    for (auto& i : inv) {
         cout << i << endl;
     }
 }
@@ -34,6 +36,21 @@ string Player::get_name () {
 }
 
 vector<string> Player::get_inv () {
-    return inventory;
+    return inv;
 }
 
+void Player::add_item (string item) {
+    inv.push_back(item);
+}
+
+void Player::del_item (string item) {
+    for (size_t i = 0; i < inv.size(); i++) {
+        if(inv[i] == item) {
+            inv.erase(inv.begin() + i);
+            break;
+        }
+        if(i == inv.size() - 1) {
+            cout << "Item not in inventory.";
+        }
+    }
+}
