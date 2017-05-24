@@ -13,9 +13,10 @@ class Player {
         Player();
         Player(string);
         void print_inv();
+        void say_name();
         void set_name(string);
         string get_name();
         vector<string> get_inv();
-}
+};
 
 #endif
