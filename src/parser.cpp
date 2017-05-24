@@ -14,7 +14,8 @@ enum act{
     look,
     take,
     drop,
-    use
+    use,
+    op
 };
 
 act hash_it (std::string const& ss) {
@@ -24,6 +25,7 @@ act hash_it (std::string const& ss) {
     if(ss == "take") {return take;}
     if(ss == "drop") {return drop;}
     if(ss == "use") {return use;}
+    if(ss == "open") {return op;}
 }
 
 void parse (vector<string> vs, Player* p) {
@@ -31,6 +33,9 @@ void parse (vector<string> vs, Player* p) {
     ////Need to decide on the command structure
     act iv = hash_it(vs[0]);
     switch (iv) {
+        case op:
+            cout << "Opening something" << endl;
+            break;
         case inv:
             cout << "Print inventory" << endl;
             p->print_inv();
