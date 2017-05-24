@@ -1,11 +1,8 @@
 #ifndef PARSER_H
 #define PARSER_H
 
-<<<<<<< HEAD
 #include "player.h"
-=======
 #include "level.h"
->>>>>>> a2a22b3b2731c41601e44eb1a85062c9027279d2
 #include <string>
 #include <vector>
 

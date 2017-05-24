@@ -18,24 +18,7 @@ Player* p_init() {
     return p;
 }
 
-
-
 int main() {
-
-    Player p("Fuck Stick");
-    p.say_name();
-
-    p.print_inv();
-
-    p.add_item("Poop turd");
-
-    p.print_inv();
-
-    p.del_item("nuts");
-    
-    p.print_inv();
-
-
 
     bool quit = false;
 
