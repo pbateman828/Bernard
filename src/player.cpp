@@ -22,9 +22,12 @@ void Player::say_name () {
 }
 
 void Player::print_inv () {
+    cout << "---------" << endl;
+    cout << "Inventory" << endl;
     for (auto& i : inv) {
         cout << i << endl;
     }
+    cout << "---------" << endl;
 }
 
 void Player::set_name (string s) {

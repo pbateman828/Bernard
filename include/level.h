@@ -1,7 +1,11 @@
 #ifndef LEVEL_H
 #define LEVEL_H
 #include <string>
-#include "boost/algorithm/string.hpp"
+
+#include "level.h"
+#include "toon.h"
+#include "player.h"
+#include "parser.h"
 
 using namespace std;
 
@@ -15,6 +19,7 @@ public:
     void level1Descript();
 
 private:
+
     string _userInputArrow = ">";
     string _dashes = "---------------------------------------";
     string _spaces = "                                       ";

@@ -1,3 +1,4 @@
+#include "level.h"
 #include "parser.h"
 #include <iostream>
 #include <string>
@@ -26,29 +27,37 @@ act hash_it (std::string const& ss) {
 }
 
 void parse (vector<string> vs) {
+    string spaces = "                                       ";
     //This is where we will look for keywords
     ////Need to decide on the command structure
     act iv = hash_it(vs[0]);
     switch (iv) {
         case inv:
+            cout << spaces << endl;
             cout << "Print inventory" << endl;
             break;
         case go:
+            cout << spaces << endl;
             cout << "Go somewhere" << endl;
             break;
         case look:
+            cout << spaces << endl;
             cout << "Look around" << endl;
             break;
         case take:
+            cout << spaces << endl;
             cout << "Take something" << endl;
             break;
         case drop:
+            cout << spaces << endl;
             cout << "Drop item" << endl;
             break;
         case use:
+            cout << spaces << endl;
             cout << "Use item on something" << endl;
             break;
         default:
+            cout << spaces << endl;
             cout << "I don't understand" << endl;
             break;
     }
@@ -65,10 +74,14 @@ vector<string> tokenize (string s) {
 }
 
 bool u_input () {
-
+    string dashes = "---------------------------------------";
+    string spaces = "                                       ";
     vector<string> tk;
     string com;
-    cout << "Tell me what to do. type \'quit\' or \'q\'to quit " << endl;
+    cout << spaces << endl;
+    cout << dashes << endl;
+    cout << "Tell me what to do. type \'quit\' or \'q\' to quit " << endl;
+    cout << ">";
     getline(cin, com);
     tk = tokenize(com);
     if(tk[0] == "quit" || tk[0] == "q") {
@@ -79,6 +92,7 @@ bool u_input () {
 
     //Need to figure a way to save the game state.
     parse(tk);
+    cout << spaces << endl;
     cout << "Thanks for the input! " << endl;
     cout << "\n";
     return false;
