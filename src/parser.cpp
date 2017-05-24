@@ -52,11 +52,6 @@ void parse (vector<string> vs) {
             cout << "I don't understand" << endl;
             break;
     }
-/*
-    for (auto& i : vs) {
-        cout << i << endl;
-    }
-*/
 }
 
 vector<string> tokenize (string s) {
@@ -76,7 +71,6 @@ bool u_input () {
     cout << "Tell me what to do. type \'quit\' or \'q\'to quit " << endl;
     getline(cin, com);
     tk = tokenize(com);
-    parse(tk);
     if(tk[0] == "quit" || tk[0] == "q") {
         return true;
     }
@@ -84,7 +78,7 @@ bool u_input () {
     //This is pretty ugly, will revisit after sleep
 
     //Need to figure a way to save the game state.
-    // parse(tk);
+    parse(tk);
     cout << "Thanks for the input! " << endl;
     cout << "\n";
     return false;
