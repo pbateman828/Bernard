@@ -21,6 +21,22 @@ Player* p_init() {
 
 
 int main() {
+
+    Player p("Fuck Stick");
+    p.say_name();
+
+    p.print_inv();
+
+    p.add_item("Poop turd");
+
+    p.print_inv();
+
+    p.del_item("nuts");
+    
+    p.print_inv();
+
+
+
     bool quit = false;
 
     Player* p = p_init();
@@ -28,7 +44,7 @@ int main() {
     while(!quit) {
         quit = u_input(p);
     }
-    /* 
+    /*
     Player kev ("Kevin");
     kev.print_inv();
     kev.say_name();
