@@ -2,11 +2,6 @@
 #define LEVEL_H
 #include <string>
 
-#include "level.h"
-#include "toon.h"
-#include "player.h"
-#include "parser.h"
-
 using namespace std;
 
 class level {

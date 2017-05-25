@@ -1,4 +1,3 @@
-#include "level.h"
 #include "parser.h"
 #include "player.h"
 #include <iostream>
@@ -54,6 +53,7 @@ void parse (vector<string> vs, Player* p) {
         case take:
             cout << spaces << endl;
             cout << "Take something" << endl;
+            p->add_item(vs[1]);
             break;
         case drop:
             cout << spaces << endl;
