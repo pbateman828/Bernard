@@ -28,7 +28,7 @@ act hash_it (std::string const& ss) {
     if(ss == "open") {return op;}
 }
 
-void parse (vector<string> vs, Player* p) {
+void parse (vector<string> vs, Player* p, level *l) {
     string spaces = "                                       ";
     //This is where we will look for keywords
     ////Need to decide on the command structure
@@ -54,6 +54,8 @@ void parse (vector<string> vs, Player* p) {
             cout << spaces << endl;
             cout << "Take something" << endl;
             p->add_item(vs[1]);
+            l->delLevel1Item(vs[1]);
+            l->printLevel1Items();
             break;
         case drop:
             cout << spaces << endl;
@@ -81,8 +83,7 @@ vector<string> tokenize (string s) {
     return tokens;
 }
 
-bool u_input (Player* p) {
-
+bool u_input (Player* p, level *l) {
     string dashes = "---------------------------------------";
     string spaces = "                                       ";
     vector<string> tk;
@@ -100,7 +101,7 @@ bool u_input (Player* p) {
     //This is pretty ugly, will revisit after sleep
 
     //Need to figure a way to save the game state.
-    parse(tk, p);
+    parse(tk, p, l);
     cout << spaces << endl;
     cout << "Thanks for the input! " << endl;
     cout << "\n";
