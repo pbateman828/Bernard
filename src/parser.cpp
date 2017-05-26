@@ -41,6 +41,7 @@ void parse (vector<string> vs, Player* p, level *l) {
             cout << spaces << endl;
             cout << "Print inventory" << endl;
             p->print_inv();
+            l->printLevelItems();
             break;
         case go:
             cout << spaces << endl;
@@ -49,18 +50,19 @@ void parse (vector<string> vs, Player* p, level *l) {
         case look:
             cout << spaces << endl;
             cout << "Look around" << endl;
+            l->printDoorNum(); //Can always move this or delete. 
             break;
         case take:
             cout << spaces << endl;
             cout << "Take something" << endl;
             p->add_item(vs[1]);
-            l->delLevel1Item(vs[1]);
-            l->printLevel1Items();
+            l->delLevelItem(vs[1]);
             break;
         case drop:
             cout << spaces << endl;
             cout << "Drop item" << endl;
             p->del_item(vs[1]);
+            l->addLevelItems(vs[1]);
             break;
         case use:
             cout << spaces << endl;

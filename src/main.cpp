@@ -5,19 +5,9 @@
 #include "toon.h"
 #include "player.h"
 #include "parser.h"
+#include "l_init.cpp"
 
 using namespace std;
-
-level* l_init() {
-    string n;
-    level* l;
-    //cout << "What is your name?" << endl;
-    //getline(cin,l);
-    l = new level{};
-    l->printIntro();
-    l->printLevel1Items();
-    return l;
-}
 
 Player* p_init() {
     string n;
@@ -34,7 +24,9 @@ int main() {
     bool quit = false;
 
     Player* p = p_init();
-    level* l = l_init();
+    level* l = l2_init(); 
+
+
 
     while(!quit) {
         quit = u_input(p, l);
@@ -48,7 +40,7 @@ int main() {
     kev.del_item("nuts");
     kev.print_inv();
     */
-    
+
     delete l;
     delete p;
 

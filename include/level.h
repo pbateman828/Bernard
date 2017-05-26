@@ -10,25 +10,30 @@ class level {
 public:
     level();
 
-    // level(string, vector<string>, int);
+    level(string, vector<string>, int);
 
     void printIntro();
 
-    void level1Descript();
+    void levelDescript();
 
-    void printLevel1Items();
+    void printLevelItems();
 
-    vector<string> getLevel1Items();
+    vector<string> getLevelItems();
 
-    void delLevel1Item(string);
+    void delLevelItem(string);
+
+    void addLevelItems(string);
+
+    void printDoorNum();
 
 private:
-    vector<string> level1Items = {"clothes", "weapons", "hat"};
+    int _doors;
+    vector<string> _levelItems;
     string _userInputArrow = ">";
     string _dashes = "---------------------------------------";
     string _spaces = "                                       ";
     string _levelDescriptWords = "Level Description";
-    string _level1Env = "Welcome to Westworld.\n";
+    string _levelEnv = "Welcome to Westworld.\n";
     string _worldName = "World Name: Bernard";
     string _intro = "Go fucking do whatever you want.\nGood day sir!";
 };
