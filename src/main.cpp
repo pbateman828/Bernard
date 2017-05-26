@@ -5,6 +5,7 @@
 #include "toon.h"
 #include "player.h"
 #include "parser.h"
+#include "l_init.cpp"
 
 using namespace std;
 
@@ -23,9 +24,12 @@ int main() {
     bool quit = false;
 
     Player* p = p_init();
+    level* l = l2_init(); 
+
+
 
     while(!quit) {
-        quit = u_input(p);
+        quit = u_input(p, l);
     }
     /*
     Player kev ("Kevin");
@@ -36,5 +40,9 @@ int main() {
     kev.del_item("nuts");
     kev.print_inv();
     */
+
+    delete l;
+    delete p;
+
     return 0;
 }

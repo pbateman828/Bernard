@@ -1,11 +1,7 @@
 #ifndef LEVEL_H
 #define LEVEL_H
 #include <string>
-
-#include "level.h"
-#include "toon.h"
-#include "player.h"
-#include "parser.h"
+#include <vector>
 
 using namespace std;
 
@@ -14,17 +10,30 @@ class level {
 public:
     level();
 
+    level(string, vector<string>, int);
+
     void printIntro();
 
-    void level1Descript();
+    void levelDescript();
+
+    void printLevelItems();
+
+    vector<string> getLevelItems();
+
+    void delLevelItem(string);
+
+    void addLevelItems(string);
+
+    void printDoorNum();
 
 private:
-
+    int _doors;
+    vector<string> _levelItems;
     string _userInputArrow = ">";
     string _dashes = "---------------------------------------";
     string _spaces = "                                       ";
     string _levelDescriptWords = "Level Description";
-    string _level1Env = "The bandit had been throwing them away. Well, because he thought it was good sport.\n Because some men aren't looking for anything logical, like money.\n They can't be bought, bullied, reasoned, or negotiated with.\n Some men just want to watch the world burn. ";
+    string _levelEnv = "Welcome to Westworld.\n";
     string _worldName = "World Name: Bernard";
     string _intro = "Go fucking do whatever you want.\nGood day sir!";
 };
