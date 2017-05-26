@@ -18,12 +18,12 @@ Player::Player (string s) {
 }
 
 void Player::say_name () {
-    cout << "My name is " << name << endl;
+    cout << "Your name is " << name << endl;
 }
 
 void Player::print_inv () {
     cout << "---------" << endl;
-    cout << "Inventory" << endl;
+    cout << "Player Inventory" << endl;
     for (auto& i : inv) {
         cout << i << endl;
     }
