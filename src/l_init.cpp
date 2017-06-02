@@ -1,10 +1,7 @@
 #include <iostream>
 #include <string>
 
-#include "level.h"
-#include "toon.h"
-#include "player.h"
-#include "parser.h"
+#include "l_init.h"
 
 using namespace std;
 

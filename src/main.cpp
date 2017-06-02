@@ -5,7 +5,7 @@
 #include "toon.h"
 #include "player.h"
 #include "parser.h"
-#include "l_init.cpp"
+#include "l_init.h"
 
 using namespace std;
 
@@ -24,7 +24,7 @@ int main() {
     bool quit = false;
 
     Player* p = p_init();
-    level* l = l2_init(); 
+    level* l = l2_init();
 
 
 

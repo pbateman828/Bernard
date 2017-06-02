@@ -50,7 +50,7 @@ void parse (vector<string> vs, Player* p, level *l) {
         case look:
             cout << spaces << endl;
             cout << "Look around" << endl;
-            l->printDoorNum(); //Can always move this or delete. 
+            l->printDoorNum(); //Can always move this or delete.
             break;
         case take:
             cout << spaces << endl;
