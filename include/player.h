@@ -4,10 +4,11 @@
 #include <string>
 #include <vector>
 #include <iostream>
+#include "level.h"
 
 using namespace std;
 
-class Player {
+class Player {        
         string name;
         vector<string> inv;
     public:
@@ -20,6 +21,7 @@ class Player {
         vector<string> get_inv();
         void add_item(string);
         void del_item(string);
+
 };
 
 #endif
