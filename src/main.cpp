@@ -5,7 +5,7 @@
 #include "toon.h"
 #include "player.h"
 #include "parser.h"
-#include "l_init.h"
+#include "l_init.cpp"
 
 using namespace std;
 
