@@ -5,7 +5,7 @@
 #include "toon.h"
 #include "player.h"
 #include "parser.h"
-#include "l_init.h"
+#include "l_init.cpp"
 
 using namespace std;
 
@@ -32,13 +32,7 @@ int main() {
         quit = u_input(p, l);
     }
     /*
-    Player kev ("Kevin");
-    kev.print_inv();
-    kev.say_name();
-    kev.add_item("ho");
-    kev.print_inv();
-    kev.del_item("nuts");
-    kev.print_inv();
+     * Hey Chris <3
     */
 
     delete l;
