@@ -8,14 +8,14 @@ mkdir Bernard
 * change into the directory
 ```
 cd Bernard
+``` 
+* Init empty repo 
+``` 
+git init 
+``` 
+* Import repo into the Bernard directory 
 ```
-* Make a directory inside the Bernard directory 
-```
-mkdir build
-```
-* change into build
-```
-cd build
+git remote add origin https://github.com/pbateman828/Bernard.git 
 ```
 * CMake 
 ``` 
