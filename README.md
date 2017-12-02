@@ -16,15 +16,15 @@ git init
 * Import repo into the Bernard directory 
 ```
 git remote add origin https://github.com/pbateman828/Bernard.git 
+``` 
+* change into src directory
+```
+cd src 
 ```
 * CMake 
 ``` 
 cmake .. 
 ``` 
-* change into src directory
-``` 
-cd src 
-```
 * Make 
 ```
 make 
