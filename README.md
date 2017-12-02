@@ -21,6 +21,10 @@ git remote add origin https://github.com/pbateman828/Bernard.git
 ``` 
 cmake .. 
 ``` 
+* change into src directory
+``` 
+cd src 
+```
 * Make 
 ```
 make 
